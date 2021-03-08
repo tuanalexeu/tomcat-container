@@ -2,7 +2,7 @@
 <%@ page import="com.alekseytyan.*"%>
 <html><head><title>Switch the log ON</title></head><body>
 <%
-    MyLog log = (MyLog)application.getAttribute("logFile");
+    MyLog log = (MyLog) application.getAttribute("logFile");
     if (log == null) {
         try {
             log = new MyLog("logs/mylog.log");
