@@ -37,4 +37,26 @@
     <login-config>
         <auth-method>BASIC</auth-method>
     </login-config>
+    
+    <servlet>
+        <servlet-name>Listener</servlet-name>
+        <servlet-class>com.alekseytyan.listener.ListenerTester</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Listener</servlet-name>
+        <url-pattern>/listener</url-pattern>
+    </servlet-mapping>
+
+
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>Great Dane</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            com.alekseytyan.listener.MyServletContextListener
+        </listener-class>
+    </listener>
 </web-app>
