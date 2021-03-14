@@ -1,8 +1,10 @@
 package com.alekseytyan.listener;
 
+import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.HttpSessionBindingListener;
 import java.io.Serializable;
 
-public class Dog implements Serializable {
+public class Dog implements Serializable, HttpSessionBindingListener {
 
     private String breed;
 
@@ -23,5 +25,15 @@ public class Dog implements Serializable {
         return "Dog{" +
                 "breed='" + breed + '\'' +
                 '}';
+    }
+
+    @Override
+    public void valueBound(HttpSessionBindingEvent httpSessionBindingEvent) {
+        // code to run now that I know I’m in a session
+    }
+
+    @Override
+    public void valueUnbound(HttpSessionBindingEvent httpSessionBindingEvent) {
+        // code to run now that I know I am no longer part of a session
     }
 }
