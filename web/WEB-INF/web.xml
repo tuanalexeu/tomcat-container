@@ -47,6 +47,16 @@
         <servlet-name>Listener</servlet-name>
         <url-pattern>/listener</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Coockie</servlet-name>
+        <servlet-class>com.alekseytyan.cookie.CookieTest</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Coockie</servlet-name>
+        <url-pattern>checkcookie.do</url-pattern>
+    </servlet-mapping>
 
 
     <context-param>
