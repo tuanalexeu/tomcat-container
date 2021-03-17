@@ -14,7 +14,7 @@
 
 <!-- Scriptlet !-->
 <% if(a == 1) { %>
-       <p>This is it</p>
+    <p>This is it</p>
 <% } %>
 
 <html>
