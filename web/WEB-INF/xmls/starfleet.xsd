@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://localhost:8080/xml-validate/xsd"
+            targetNamespace="http://localhost:8080/xml-validate/xsd"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="starfleet">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="title" type="xsd:string" maxOccurs="1"/>
+                <xsd:element name="starship" type="ShipType" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="ShipType">
+        <xsd:all>
+            <xsd:element name="class" type="ClassType" minOccurs="1"/>
+            <xsd:element name="captain" type="xsd:string" minOccurs="1"/>
+        </xsd:all>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="sn" type="xsd:string" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="ClassType">
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+    </xsd:complexType>
+</xsd:schema>
