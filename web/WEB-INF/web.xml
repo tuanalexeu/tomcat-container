@@ -37,22 +37,22 @@
     <login-config>
         <auth-method>BASIC</auth-method>
     </login-config>
-    
+
     <servlet>
         <servlet-name>Listener</servlet-name>
         <servlet-class>com.alekseytyan.listener.ListenerTester</servlet-class>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>Listener</servlet-name>
         <url-pattern>/listener</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>Coockie</servlet-name>
         <servlet-class>com.alekseytyan.cookie.CookieTest</servlet-class>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>Coockie</servlet-name>
         <url-pattern>checkcookie.do</url-pattern>
@@ -69,4 +69,18 @@
             com.alekseytyan.listener.MyServletContextListener
         </listener-class>
     </listener>
+
+
+    <context-param>
+        <param-name>dbName</param-name>
+        <param-value>jdbc:mysql://localhost:3306/shop</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUser</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPass</param-name>
+        <param-value>143179179</param-value>
+    </context-param>
 </web-app>
