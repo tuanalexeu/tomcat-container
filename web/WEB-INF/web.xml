@@ -70,6 +70,21 @@
         </listener-class>
     </listener>
 
+    <servlet>
+        <servlet-name>jdbc</servlet-name>
+        <jsp-file>jdbc/jdbc.jsp</jsp-file>
+
+        <init-param>
+            <param-name>jdbcDriver</param-name>
+            <param-value>com.mysql.jdbc.Driver</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jdbc</servlet-name>
+        <url-pattern>/jdbc</url-pattern>
+    </servlet-mapping>
+
 
     <context-param>
         <param-name>dbName</param-name>

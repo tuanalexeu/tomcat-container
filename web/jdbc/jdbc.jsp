@@ -8,7 +8,7 @@
     String dbUser = application.getInitParameter("dbUser");
     String dbPass = application.getInitParameter("dbPass");
 
-    Class.forName("com.mysql.jdbc.Driver");
+    Class.forName(config.getInitParameter("jdbcDriver"));
     Connection conn = DriverManager.getConnection(dbName, dbUser, dbPass);
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("select * from books");
