@@ -1,7 +1,7 @@
 <%@page contentType="text/html; ISO-8859-1" %>
 <%@taglib tagdir="/WEB-INF/tags" prefix="wow"%>
 <%
-    String d = request.getParameter("d");
+    String d = request.getParameter("db");
 %>
 <html>
 <head><title>Weekday bodyless tag</title></head>
