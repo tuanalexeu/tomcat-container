@@ -5,39 +5,6 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <security-role>
-        <role-name>canDoThat</role-name>
-    </security-role>
-
-    <security-role>
-        <role-name>canDoThis</role-name>
-    </security-role>
-
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>This</web-resource-name>
-            <url-pattern>/auth/this/*</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>canDoThis</role-name>
-        </auth-constraint>
-    </security-constraint>
-
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>That</web-resource-name>
-            <url-pattern>/auth/that/*</url-pattern>
-            <http-method>GET</http-method>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>canDoThat</role-name>
-        </auth-constraint>
-    </security-constraint>
-
-    <login-config>
-        <auth-method>BASIC</auth-method>
-    </login-config>
-
     <servlet>
         <servlet-name>Listener</servlet-name>
         <servlet-class>com.alekseytyan.listener.ListenerTester</servlet-class>
@@ -72,7 +39,7 @@
 
     <servlet>
         <servlet-name>jdbc</servlet-name>
-        <jsp-file>jdbc/jdbc.jsp</jsp-file>
+        <jsp-file>/jdbc/jdbc.jsp</jsp-file>
 
         <init-param>
             <param-name>jdbcDriver</param-name>
@@ -83,6 +50,16 @@
     <servlet-mapping>
         <servlet-name>jdbc</servlet-name>
         <url-pattern>/jdbc</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>com.alekseytyan.servlet.TestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/test.bean</url-pattern>
     </servlet-mapping>
 
 
