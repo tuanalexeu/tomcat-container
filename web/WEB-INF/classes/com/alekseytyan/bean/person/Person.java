@@ -1,6 +1,6 @@
-package com.alekseytyan.bean;
+package com.alekseytyan.bean.person;
 
-public class Person {
+public abstract class Person {
 
     private String firstName;
     private String lastName;

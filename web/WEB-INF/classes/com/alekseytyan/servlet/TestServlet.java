@@ -1,6 +1,7 @@
 package com.alekseytyan.servlet;
 
-import com.alekseytyan.bean.Person;
+import com.alekseytyan.bean.person.Employee;
+import com.alekseytyan.bean.person.Person;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,7 +13,7 @@ import java.io.IOException;
 public class TestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Person person = new Person("Aleksey", "Tyan");
+        Person person = new Employee("Aleksey", "Tyan");
 
         req.setAttribute("person", person);
 
