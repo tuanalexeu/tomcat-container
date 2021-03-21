@@ -1,4 +1,4 @@
-package com.alekseytyan;
+package com.alekseytyan.test;
 
 import java.io.IOException;
 import java.io.InputStream;

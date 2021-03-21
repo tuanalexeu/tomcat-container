@@ -1,4 +1,4 @@
-package com.alekseytyan;
+package com.alekseytyan.test;
 
 import java.io.FileWriter;
 import java.io.IOException;
