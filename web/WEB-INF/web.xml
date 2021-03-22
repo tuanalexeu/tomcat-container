@@ -63,6 +63,17 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>include_test</servlet-name>
+        <jsp-file>/includes/test/include.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>include_test</servlet-name>
+        <url-pattern>/include_test</url-pattern>
+    </servlet-mapping>
+
+
     <context-param>
         <param-name>dbName</param-name>
         <param-value>jdbc:mysql://localhost:3306/shop</param-value>
